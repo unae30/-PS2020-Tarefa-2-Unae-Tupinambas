@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarefa_2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <script src='classes.js'></script>
+</head>
+<body>
+
+    <script> 
+    
+    //curso, universidade e republica instanciados
+
+    var curso1 = new Curso('ENGENHARIA DA COMPUTAÇÃO',3630,10);  
+    var uni= new Universidade('UFOP',curso1.nome,'icea');
+    var repub = new Republica('Orafanto',5,10);
+      
+
+    // Estudantes instanciados
+
+    var e1 = new Estudante('Pedro',20,'m','',curso1);
+    var e2 = new Estudante('Ana',17,'f','',curso1);
+    var e3 = new Estudante('Paulo',23,'m',repub,'');
+    var e4 = new Estudante('Armando',17,'m',repub,'');
+  
+  
+  
+    //bebidas instanciadas
+
+    var cerveja= new Bebida('cerveja',4.5);
+    var cocacola = new Bebida('coca-cola',4.5);
+    
+
+    //pedidos instanciados
+    var pedido1= new Pedido(cerveja,e1.nome); 
+    var pedido2= new Pedido(cerveja,e3.nome);
+    var pedido3= new Pedido(cocacola,e2.nome);
+    var pedido4= new Pedido(cocacola,e4.nome);
+
+    //pessoas instanciada
+
+    var garçom= new Pessoa('André','m','');
+
+ 
+    console.log(garçom.checarIDs(e1));
+    console.log(garçom.checarIDs(e2));
+    console.log(garçom.checarIDs(e3));
+    console.log(garçom.checarIDs(e4));
+
+    console.log(e1.pedirConta);
+    console.log(e2.pedirConta);
+    console.log(e3.pedirConta);
+    console.log(e4.pedirConta);
+    
+    console.log(garçom.calcularTotal(pedido1.bebida.preço,pedido2.bebida.preço,pedido3.bebida.preço,pedido4.bebida.preço));
+    console.log(garçom.calcularIndividual(pedido1.bebida.preço,pedido2.bebida.preço,pedido3.bebida.preço,pedido4.bebida.preço));
+
+    </Script>
+    
+</body>
+</html>>
